@@ -6,7 +6,7 @@ import os
 api_key = os.environ.get("API_KEY")
 
 if not api_key:
-    st.error("API Key not found. Please set the GOOGLE_API_KEY environment variable.")
+    st.error("API Key not found. Please set the API_KEY environment variable.")
     st.stop()
 else:
     genai.configure(api_key=api_key)
