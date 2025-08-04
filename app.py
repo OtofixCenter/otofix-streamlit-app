@@ -5,10 +5,7 @@ import os
 # Get the API key from environment variables
 api_key = os.environ.get("API_KEY")
 
-if not api_key:
-    st.error("API Key not found. Please set the API_KEY environment variable.")
-    st.stop()
-else:
+
     genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel('gemini-pro')
